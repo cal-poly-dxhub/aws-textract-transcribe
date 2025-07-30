@@ -58,10 +58,16 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+### 4. Run the Pipeline to transcribe different Videos
+
+```bash
+python3 transcribe_pipeline.py
+```
+
 ### 4. Run the Pipeline to summarize Video
 
 ```bash
-python pipeline.py
+python3 pipeline.py
 ```
 
 This project demonstrates how to:
