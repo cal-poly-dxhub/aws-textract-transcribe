@@ -87,4 +87,4 @@ with open("textract_output.txt", "w") as f:
     for row, col, text in table_cells:
         f.write(f"Row {row}, Column {col}: {text}\n")
 
-print("\n✅ Results saved to textract_output.txt")
+print("\nResults saved to textract_output.txt")

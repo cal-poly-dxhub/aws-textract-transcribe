@@ -11,5 +11,5 @@ response = textract.detect_document_text(
 )
 
 for block in response['Blocks']:
-    if block['BlockType'] == 'LINE':
+    if block['BlockType'] == 'WORD':
         print(block['Text'])
