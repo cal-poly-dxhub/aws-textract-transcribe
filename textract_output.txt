@@ -1,0 +1,59 @@
+=== FORMS ===
+Page : 
+ATTN: : CLUB
+Co-Advisor #1 Name : John Doe
+Club Member or Officer Signature : 
+Club Officer Name : Everly Vincent
+Primary Full-Time Advisor Name : Nick Riley
+Club Member or Officer Name : Jennie Kerr
+Co-Advisor #2 Name : Laura Ashley
+Club Member or Officer Signature : 
+Club Member or Officer Name : 
+Club Officer Signature : 
+Club President Signature : 
+Co-Advisor #1 Signature : to of
+Club Member or Officer Name : Anton Bullock
+Club Officer Signature : 
+Club Member or Officer Signature : 
+Co-Advisor #2 Signature : 
+Club Officer Name : Barney Scott
+Club President Name : Allen Ross
+CLUB NAME: : Rowing Club
+Primary Full-Time Advisor Signature : 
+From the list above, which Officer will be the Delegate to the ICC (will also serve as liaison to Office of Student Life)? : Anton Bullock
+C. GOOGLE: : Google accounts - download app: DocHub
+Instructions: : 1) Fill out and obtain signatures 2) Upload to Club Registration electronic form or email to the Office of Student Life at osl@smc.edu
+MICROSOFT EDGE: : click on "Add Notes."
+IPHONE: : select document and download and use Notes, which allows for hand signatures.
+
+=== TABLES ===
+Row 1, Column 1: Co-Advisors
+Row 1, Column 2: 
+Row 2, Column 1: John Doe
+Row 2, Column 2: to of
+Row 3, Column 1: Co-Advisor #1 Name
+Row 3, Column 2: Co-Advisor #1 Signature
+Row 4, Column 1: Laura Ashley
+Row 4, Column 2: 
+Row 5, Column 1: Co-Advisor #2 Name
+Row 5, Column 2: Co-Advisor #2 Signature
+Row 1, Column 1: 
+Row 1, Column 2: 
+Row 2, Column 1: Club President Name
+Row 2, Column 2: Club President Signature
+Row 3, Column 1: Barney Scott
+Row 3, Column 2: 
+Row 4, Column 1: Club Officer Name
+Row 4, Column 2: Club Officer Signature
+Row 5, Column 1: Everly Vincent
+Row 5, Column 2: 
+Row 6, Column 1: Club Officer Name Jennie Kerr
+Row 6, Column 2: Club Officer Signature
+Row 7, Column 1: Club Member or Officer Name
+Row 7, Column 2: Club Member or Officer Signature
+Row 8, Column 1: Anton Bullock
+Row 8, Column 2: 
+Row 9, Column 1: Club Member or Officer Name
+Row 9, Column 2: Club Member or Officer Signature
+Row 10, Column 1: Club Member or Officer Name
+Row 10, Column 2: Club Member or Officer Signature
