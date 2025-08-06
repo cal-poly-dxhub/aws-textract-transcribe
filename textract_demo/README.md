@@ -36,7 +36,9 @@ Follow these steps in order:
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/cal-poly-dxhub/video-summarizer-ai.git
+git clone https://github.com/cal-poly-dxhub/aws-textract-transcribe.git
+cd aws-textract-transcribe
+cd textract_demo
 ```
 
 ### 2. Create a Virtual Environment
