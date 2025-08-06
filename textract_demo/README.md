@@ -75,7 +75,7 @@ python scripts/detect_text.py
 ### Forms + Tables Extraction
 
 ```bash
-python scripts/custom_queries.py
+python scripts/analyze_forms_tables.py
 ```
 - Uses analyze_document with FeatureTypes=['FORMS', 'TABLES']
 - Extracts key-value pairs from forms and cell-by-cell data from tables
