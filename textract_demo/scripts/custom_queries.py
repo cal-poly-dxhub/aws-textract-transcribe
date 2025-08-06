@@ -52,7 +52,6 @@ def process_text_analysis(path):
         ]
     }
 
-  
     with open(path, 'rb') as img_file:
         img_bytes = img_file.read()
         response = client.analyze_document(

@@ -5,9 +5,9 @@ import uuid
 from tqdm.auto import tqdm
 
 
-REGION = "us-west-2"
+REGION = "us-east-2"
 # CHANGE THIS TO YOUR BUCKET NAME!
-BUCKET = "transcribe-demo-bucket"
+BUCKET = "transcribe-example-sharon"
 # FEEL FREE TO CHANGE THESE VIDS BY ADDING YOUR OWN!
 FILES = {
     "basic": "transcribe.mp4",
