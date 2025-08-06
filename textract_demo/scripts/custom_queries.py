@@ -90,7 +90,7 @@ def process_text_analysis(path):
 
 def main():
 
-    block_count=process_text_analysis("sample_deeds/helen_grant.pdf")
+    block_count=process_text_analysis("sample_data/sample_deeds/helen_grant.pdf")
     print("\nBlocks detected: " + str(block_count))
     
 if __name__ == "__main__":

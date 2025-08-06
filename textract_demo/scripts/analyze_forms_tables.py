@@ -4,7 +4,7 @@ import boto3
 textract = boto3.client('textract')
 
 # Local document path
-document_path = 'club_registration_form.pdf'
+document_path = 'sample_data/club_registration_form.pdf'
 
 # Read document bytes
 with open(document_path, 'rb') as doc_file:
@@ -77,6 +77,7 @@ for key, value in form_fields:
 print("\n=== TABLES ===")
 for row, col, text in table_cells:
     print(f"Row {row}, Column {col}: {text}")
+    
 
 # Optional: Save results to file
 with open("textract_output.txt", "w") as f:
@@ -86,5 +87,6 @@ with open("textract_output.txt", "w") as f:
     f.write("\n=== TABLES ===\n")
     for row, col, text in table_cells:
         f.write(f"Row {row}, Column {col}: {text}\n")
+
 
 print("\nResults saved to textract_output.txt")
