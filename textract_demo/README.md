@@ -1,52 +1,53 @@
-# Cal Poly AI Summer Camp: Audio Transcription & Summarization Pipeline
+# Cal Poly AI Summer Camp: AWS Textract Demo
+Welcome to our AI Summer Camp project! This demo walks you through how to extract text and structured data from scanned documents using **Amazon Textract**.
 
-Welcome to our AI Summer Camp project! This hands-on activity will teach you how to convert video and audio files into structured, easy-to-read summaries using **Amazon Transcribe** and **Amazon Bedrock**. You'll learn how to trigger and track transcription jobs, retrieve results, and generate bullet-point summaries using an LLM, all with Python and AWS.
+You'll learn how to:
+- Detect raw text from PDFs/images
+- Analyze forms and tables
+- Run custom queries using natural language
+- Process real-world PDFs with just a few lines of Python
 
-## Contact
-
-**Instructors**:
-Kartik Malunjkar kmalunjk@calpoly.edu [video_summarizer.py]
-Sharon Liang sliang19@calpoly.edu [transcribe_pipeline.py]
+## Contact Information
+Instructor: Dhvani Goel - dhgoel@calpoly.edu
 
 ## Prerequisites
+Ensure your AWS account has access to:
+- `textract:AnalyzeDocument`
+- `textract:DetectDocumentText`
+- `s3:*` (for future S3 integration)
+- Optional: `textract:AnalyzeDocumentWithAdapter` if using custom queries with adapters
 
-AWS CLI set up with proper credentials
-IAM permissions for: (Navigate into IAM roleson AWS console and check for adminstrator access)
-
-- transcribe:StartTranscriptionJob
-- transcribe:GetTranscriptionJob
-- s3:\* for the relevant bucket
-- bedrock:InvokeModel
+You should also have:
+- Python 3.7+
+- AWS CLI configured
+- Boto3 installed (`pip install boto3`)
 
 ## What You'll Learn
+Goal: Extract data from documents using multiple Textract features
 
-- Goal: Explore the features of Amazon Transcribe
-- How to launch transcription jobs with **Amazon Transcribe**
-- How to read transcript results from an **S3 bucket**
-- How to generate **summaries** using ** Claude v2** on the video you uploaded
+- How to extract plain text using `DetectDocumentText`
+- How to extract key-value pairs and tables using `AnalyzeDocument`
+- How to ask natural-language questions with **Textract Custom Queries**
+- How to structure outputs for processing or automation
 
 ## Getting Started
 
 Follow these steps in order:
 
 ### 1. Clone the Repository
-
 ```bash
-git clone https://github.com/cal-poly-dxhub/aws-textract-transcribe.git
-
+git clone https://github.com/cal-poly-dxhub/video-summarizer-ai.git
 ```
 
 ### 2. Create a Virtual Environment
 
 For macOS/Linux:
-
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
 
 For Windows:
-
 ```bash
 python -m venv venv
 venv\Scripts\activate
@@ -58,40 +59,31 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Run the Pipeline to summarize Video
+## How to Run Each Script
+
+### Raw Text Detection
 
 ```bash
-python pipeline.py
+python scripts/detect_text.py
 ```
+- Uses detect_document_text
+- Outputs all lines of printed or handwritten text
+- Best for simple OCR use cases
 
-This project demonstrates how to:
+### Forms + Tables Extraction
 
-- Start a transcription job from an `.mp4` or `.mp3` file stored in S3
-- Track the job's progress using a live progress bar
-- Retrieve the raw transcript from S3 once complete
-- Format a Bedrock prompt to generate 5–7 concise, numbered bullet points (can change the prompt)
-- Display the summary in your terminal
+```bash
+python scripts/custom_queries.py
+```
+- Uses analyze_document with FeatureTypes=['FORMS', 'TABLES']
+- Extracts key-value pairs from forms and cell-by-cell data from tables
+- Great for structured documents
 
-## Common Issues
+### Custom Queries with Adapter
 
-1. AWS Credentials & Permissions
-   Issue: AccessDenied, NoCredentialsError, copy paste temprary access keys into terminal
-   Fix: Run aws configure; ensure IAM role allows transcribe:\*, bedrock:InvokeModel, s3:GetObject
-2. S3 File Access
-   Issue: Transcribe can't find or access your .mp4 or .mp3
-   Fix: Check file exists in S3, path is correct (s3://bucket/file), and object permissions allow access
-3. Transcribe Input Validity
-   Issue: Unsupported format, silent/corrupt audio, or empty transcript
-   Fix: Use .mp3, .mp4, .mov, .wav with real spoken content; test with short, clean audio
-4. Transcript URI Retrieval
-   Issue: Transcript link fails (403, expired, or empty)
-   Fix: Wait for job completion; check TranscriptFileUri manually; retry fetch if needed
-5. Bedrock Model Call
-   Issue: Model not found, payload error, or too-long input
-   Fix: Use correct model ID (e.g., Claude 3); validate JSON structure; chunk long transcripts into smaller pieces
-
-## Learn More
-
-[Amazon Transcribe Documentation] — https://docs.aws.amazon.com/transcribe/latest/dg/what-is-transcribe.html
-[StartTranscriptionJob API Reference] — https://docs.aws.amazon.com/transcribe/latest/dg/API_StartTranscriptionJob.html
-[GitHub Example: AWS Transcribe Pipeline] — https://github.com/aws-samples/aws-transcribe-example
+```bash
+python scripts/custom_queries.py
+```
+- Uses analyze_document with FeatureTypes=['QUERIES']
+- Asks questions like: “Who is the grantor?”, “What county is the property located in?”
+- Reads adapter ID from adapter.config
