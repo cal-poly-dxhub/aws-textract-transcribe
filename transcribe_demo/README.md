@@ -34,6 +34,8 @@ Follow these steps in order:
 
 ```bash
 git clone https://github.com/cal-poly-dxhub/aws-textract-transcribe.git
+cd aws-textract-transcribe
+cd transcribe_demo
 
 ```
 
