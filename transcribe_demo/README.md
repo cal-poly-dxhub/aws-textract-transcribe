@@ -6,6 +6,7 @@ Welcome to our AI Summer Camp project! This hands-on activity will teach you how
 
 **Instructors**:
 Kartik Malunjkar kmalunjk@calpoly.edu [video_summarizer.py]
+
 Sharon Liang sliang19@calpoly.edu [transcribe_pipeline.py]
 
 ## Prerequisites
@@ -58,16 +59,19 @@ venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 4. Run the Pipeline to transcribe different Videos
+### 4. Upload videos in sample_audio_and_video folder into an s3 bucket
+
+### 5. Run the Pipeline to transcribe different types Videos [DEMO 1]
 
 ```bash
 python3 transcribe_pipeline.py
 ```
 
-### 4. Run the Pipeline to summarize Video
+### 5. Run the Pipeline to summarize Video transcript with LLM [DEMO 2]
 
 ```bash
-python3 pipeline.py
+python3 video_summarizer.py
+
 ```
 
 This project demonstrates how to:
